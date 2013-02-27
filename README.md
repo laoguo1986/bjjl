@@ -6,7 +6,7 @@ cd bjjl
 
 ##编辑gemfile
 
-<p>
+<pre>
 source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.12'
@@ -42,7 +42,7 @@ group :production do
   gem 'pg', '>= 0.12.2' #pg 是用来连接 PostgreSQL 数据库的，Heroku 使用这个数据库
 end
 
-</p>
+</pre>
 
 <p>
 bundle install
