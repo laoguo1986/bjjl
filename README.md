@@ -350,11 +350,10 @@ aside {
     </div>
   </body>
 </html>
-'''
+</pre>
 ###app/helpers/application_helper.rb 
 其中，<title><%= full_title(yield(:title)) %></title>中调用了 app/helpers/application_helper.rb 
-
-'''ruby
+<pre>
 module ApplicationHelper
 
   # Returns the full title on a per-page basis.
@@ -374,10 +373,11 @@ Rails 3 默认会使用 HTML5（如 <!DOCTYPE html> 所示），因为 HTML5 标
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-'''
+
+</pre>
 
 ### <%= render 'layouts/header' %>
-'''erb
+<pre>
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
