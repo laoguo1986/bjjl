@@ -44,31 +44,34 @@ end
 
 </pre>
 
-<p>
+<pre>
 bundle install
 rake db:create
-</p>
+</pre>
+
 #静态页面
 ##创建控制器及页面
-<p>
+<pre>
 rails generate controller StaticPages home help about contact
-</p>
+</pre>
 
 ##编辑路由
-<p>
+<pre>
   root to: 'static_pages#home'
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
-</p>
+</pre>
 
 ###删除index.html
-<p>
+<pre>
 rm public/index.html
-</p>
+</pre>
 ##Bootstrap
 ###添加gem 
+<pre>
 gem 'bootstrap-sass', '2.0.4' 
+</pre>
 
 bootstrap-sass 会将 LESS 转换成 Sass 格式
 
@@ -77,7 +80,7 @@ bootstrap-sass 会将 LESS 转换成 Sass 格式
 app/assets/stylesheets,是 asset pipeline 的一部分,这个目录中的所有样式表都会自动的包含在网站的 application.css 中。
 
 创建自定义css:app/assets/stylesheets/custom.css.scss
-'''css
+<pre>
 /* 引入整个 Bootstrap CSS 框架 */
 @import "bootstrap";
 
@@ -321,11 +324,11 @@ aside {
     margin-bottom: 5px;
   }
 }
-'''
+</pre>
 ##编辑 app/views/layouts/ 下文件
 
 ### application.html.erb
-'''erb
+<pre>
 <!DOCTYPE html>
 <html>
   <head>
@@ -364,11 +367,10 @@ module ApplicationHelper
     end
   end
 end
-'''
+</pre>
 ###<%= render 'layouts/shim' %> 
 Rails 3 默认会使用 HTML5（如 <!DOCTYPE html> 所示），因为 HTML5 标准还很新，有些浏览器（特别是较旧版本的 IE 浏览器）还没有完全支持，所以我们加载了一些 JavaScript 代码（称作“HTML5 shim”）来解决这个问题：
-
-'''erb
+<pre>
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -407,11 +409,11 @@ Rails 3 默认会使用 HTML5（如 <!DOCTYPE html> 所示），因为 HTML5 标
     </div>
   </div>
 </header>
-'''
+</pre>
 header 标签的意思是放在网页顶部的内容。我们为 header 标签指定了两个 CSS class3，navbar 和 navbar-fixed-top
 
 ###footer
-'''erb
+<pre>
 <footer class="footer">
   <small>
     <a href="http://railstutorial.org/">Rails Tutorial</a>
@@ -425,8 +427,7 @@ header 标签的意思是放在网页顶部的内容。我们为 header 标签�
     </ul>
   </nav>
 </footer>
-'''
-
+</pre>
 #mysql
 ##常用命令
 ###安装
